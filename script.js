@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         mainCard.classList.remove('flipped');
     });
 
-    // Floating Elements (Hearts and Medical Crosses)
-    const symbols = ['❤️', '🩺', '✨', '💊', '💖', '👩‍⚕️'];
+    // Floating Elements (Pizza, Coffee, Sleep, Meds)
+    const symbols = ['🍕', '🩺', '☕', '💊', '😴', '🚑'];
     
     function createFloatingElement() {
         const el = document.createElement('div');
@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const el = document.createElement('div');
                 el.className = 'floating-element';
-                el.textContent = '❤️';
+                const explosionSymbols = ['🍕', '☕', '😴', '💊'];
+                el.textContent = explosionSymbols[Math.floor(Math.random() * explosionSymbols.length)];
                 el.style.fontSize = `${Math.random() * 20 + 10}px`;
                 el.style.left = `${window.innerWidth / 2 + (Math.random() * 200 - 100)}px`;
                 
