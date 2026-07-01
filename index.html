@@ -3,54 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Doctor's Day!</title>
+    <title>Happy Doctor's Day, Dr. Mehak! 🩺</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-animation"></div>
-    
-    <main class="container">
-        <div class="card glass-effect" id="mainCard">
-            <div class="card-inner">
-                <div class="card-front">
-                    <div class="icon-container">
-                        <svg class="stethoscope-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
-                            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
-                            <circle cx="20" cy="10" r="2"/>
-                            <path d="M8 2v1"/>
-                            <path d="M14 2v1"/>
-                        </svg>
-                    </div>
-                    <h1>Urgent Medical Alert!</h1>
-                    <p class="subtitle">A highly contagious condition has been detected...</p>
-                    <button class="btn" id="revealBtn">
-                        <span>Examine Patient Case</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </button>
+
+    <!-- ============ STAGE 1: WAITING ROOM ============ -->
+    <section id="stage-1" class="stage active">
+        <div class="grid-overlay"></div>
+        <div class="ecg-container">
+            <svg class="ecg-svg" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="ecg-path" d="M0,60 L100,60 L130,60 L140,20 L155,100 L165,10 L180,90 L195,60 L250,60 L280,60 L310,60 L320,20 L335,100 L345,10 L360,90 L375,60 L430,60 L460,60 L490,60 L500,20 L515,100 L525,10 L540,90 L555,60 L610,60 L640,60 L670,60 L680,20 L695,100 L705,10 L720,90 L735,60 L790,60 L820,60 L850,60 L860,20 L875,100 L885,10 L900,90 L915,60 L970,60 L1000,60 L1030,60 L1040,20 L1055,100 L1065,10 L1080,90 L1095,60 L1200,60"/>
+            </svg>
+        </div>
+
+        <div class="s1-content">
+            <div class="clinic-badge">
+                <div class="badge-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+                        <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+                        <circle cx="20" cy="10" r="2"/>
+                        <path d="M8 2v1"/><path d="M14 2v1"/>
+                    </svg>
                 </div>
-                
-                <div class="card-back glass-effect">
-                    <h2>Happy Doctor's Day! 🩺</h2>
-                    <div class="message-content">
-                        <p><strong>Diagnosis:</strong> Chronic Overworking & Acute Awesomeness.</p>
-                        <p><strong>Prescription:</strong> Immediate administration of one large pizza, 10 hours of uninterrupted sleep, and endless coffee.</p>
-                        <p>Thanks for being a lifesaver every single day. I'm so proud of you!</p>
-                    </div>
-                    <div class="heart-animation">☕</div>
-                    <button class="btn btn-secondary" id="resetBtn">Close</button>
+                <span class="badge-text">Dr. Mehak Tariq's Practice</span>
+            </div>
+
+            <div class="ticket-machine">
+                <div class="ticket-label">NOW SERVING</div>
+                <div class="ticket-number">
+                    <span class="blink-star">✶</span> YOU <span class="blink-star">✶</span>
+                </div>
+            </div>
+
+            <h1 class="s1-title">A Special Delivery<br>for <em>Dr. Mehak</em></h1>
+            <p class="s1-subtitle">A quick appointment has been scheduled.<br>Please proceed to the consultation room.</p>
+
+            <button class="cta-btn" id="enterBtn">
+                <span>Enter the Clinic</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- ============ STAGE 2: CUTE QUIZ ============ -->
+    <section id="stage-2" class="stage">
+        <div class="quiz-bg"></div>
+        <div class="quiz-card">
+            <div class="progress-bar-wrap">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-label"><span id="qNum">1</span> / 3</div>
+
+            <!-- Question 1 -->
+            <div class="question active" id="q1">
+                <div class="q-icon">☕</div>
+                <h2 class="q-title">What's your go-to<br>energy source?</h2>
+                <div class="options">
+                    <button class="option-btn" data-q="1" data-val="Strong Coffee">☕ Strong Coffee</button>
+                    <button class="option-btn" data-q="1" data-val="a warm cup of chai">🍵 Warm Chai</button>
+                    <button class="option-btn" data-q="1" data-val="a quick power nap">💤 A Power Nap</button>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question" id="q2">
+                <div class="q-icon">🌤️</div>
+                <h2 class="q-title">How are you feeling<br>today, honestly?</h2>
+                <div class="options">
+                    <button class="option-btn" data-q="2" data-val="great">🌟 Great, actually!</button>
+                    <button class="option-btn" data-q="2" data-val="okay">😊 Pretty okay</button>
+                    <button class="option-btn" data-q="2" data-val="tired">😴 Ready to sleep</button>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question" id="q3">
+                <div class="q-icon">🌙</div>
+                <h2 class="q-title">Perfect end to your day?</h2>
+                <div class="options">
+                    <button class="option-btn" data-q="3" data-val="something delicious">🍕 Something yummy</button>
+                    <button class="option-btn" data-q="3" data-val="your favourite show">📺 Favourite show</button>
+                    <button class="option-btn" data-q="3" data-val="just sleeping">💤 Just... sleep</button>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
-    <div class="floating-elements" id="floatingContainer"></div>
+    <!-- ============ STAGE 3: PRESCRIPTION REVEAL ============ -->
+    <section id="stage-3" class="stage">
+        <div class="prescription-page">
+            <div class="rx-header">
+                <div class="rx-logo">Rx</div>
+                <div class="rx-clinic-info">
+                    <strong>Dr. Mehak Tariq</strong>
+                    <span>MBBS — A Superhero in Disguise</span>
+                </div>
+            </div>
+            <div class="rx-divider"></div>
+            <div class="rx-body" id="rxBody"></div>
+            <div class="rx-footer" id="rxFooter" style="display:none;">
+                <div class="rx-stamp">APPROVED ✓</div>
+                <div class="rx-sig">Signed: <em>Someone very proud of you ♡</em></div>
+            </div>
+        </div>
+        <button class="restart-btn" id="restartBtn" style="display:none;">Start Over ↩</button>
+    </section>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
 
     <script src="script.js"></script>
 </body>
