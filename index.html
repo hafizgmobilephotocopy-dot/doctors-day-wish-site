@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Doctor's Day!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <main class="container">
+        <div class="card glass-effect" id="mainCard">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="icon-container">
+                        <svg class="stethoscope-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+                            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+                            <circle cx="20" cy="10" r="2"/>
+                            <path d="M8 2v1"/>
+                            <path d="M14 2v1"/>
+                        </svg>
+                    </div>
+                    <h1>To My Brilliant Fiancé</h1>
+                    <p class="subtitle">There's something I need to tell you...</p>
+                    <button class="btn" id="revealBtn">
+                        <span>Reveal the Diagnosis</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="card-back glass-effect">
+                    <h2>Happy Doctor's Day! 🩺❤️</h2>
+                    <div class="message-content">
+                        <p>To the most dedicated, compassionate, and beautiful doctor I know.</p>
+                        <p>I am so incredibly proud of everything you do. You heal with your hands and comfort with your heart.</p>
+                        <p>I can't wait to spend the rest of my life with my favorite superhero.</p>
+                    </div>
+                    <div class="heart-animation">❤️</div>
+                    <button class="btn btn-secondary" id="resetBtn">Close</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="floating-elements" id="floatingContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
